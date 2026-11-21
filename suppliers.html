@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="County Hub procurement and 340B compliance">
+  <title>Suppliers | County Hub</title>
+  <link rel="stylesheet" href="county-hub.css">
+  <script src="county-hub.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="340b-dashboard.html"><span class="brand-mark">CH</span><span><strong>County Hub</strong><small>Healthcare Management</small></span></a>
+    <p class="nav-heading">PROCUREMENT</p>
+    <nav class="side-nav">
+      <a class="nav-link active" href="suppliers.html">Supplier Management</a><a class="nav-link " href="purchase-orders.html">Purchase Order Creation</a><a class="nav-link " href="order-approval.html">Purchase Order Approval</a><a class="nav-link " href="receiving-invoices.html">Goods Receiving & Invoices</a>
+    </nav>
+    <p class="nav-heading">340B COMPLIANCE</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="340b-dashboard.html">340B Program Dashboard</a><a class="nav-link " href="covered-entities.html">Covered Entities</a><a class="nav-link " href="340b-transactions.html">Transactions & Eligibility</a><a class="nav-link " href="compliance.html">Compliance & Audit</a>
+    </nav>
+    <div class="sidebar-bottom"><strong>County Hub</strong><small>Procurement &amp; 340B workspace</small></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div class="breadcrumbs">County Hub <span>/</span> Suppliers</div>
+      <div class="topbar-user"><span class="notification-indicator">●</span><span class="user-avatar">JD</span><span><strong>Sharmeen Asghar</strong><small>Procurement Admin</small></span></div>
+    </header>
+    <section class="page-content">
+      <div class="page-heading">
+        <div><p class="eyebrow">PROCUREMENT MANAGEMENT</p><h1>Suppliers</h1><p class="page-description">Manage supplier records, contacts, onboarding information and supplier details.</p></div>
+        <div class="page-actions"><button class="button button-secondary" type="button" data-action="export">Export CSV</button></div>
+      </div>
+      
+<div class="tabs" role="tablist">
+  <button class="tab-button active" type="button" data-tab="supplier-list">Supplier directory</button>
+  <button class="tab-button" type="button" data-tab="supplier-profile">Supplier details</button>
+</div>
+<section class="tab-panel active" id="supplier-list">
+  <div class="metric-grid">
+    <article class="metric-card"><span>Total suppliers</span><strong>128</strong><small>All registered suppliers</small></article>
+    <article class="metric-card"><span>Active</span><strong>112</strong><small class="positive">Approved for purchasing</small></article>
+    <article class="metric-card"><span>Pending verification</span><strong>09</strong><small class="warning-text">Awaiting review</small></article>
+    <article class="metric-card"><span>Suspended</span><strong>07</strong><small class="danger-text">Purchasing restricted</small></article>
+  </div>
+  <section class="panel">
+    <div class="panel-heading"><div><h2>Supplier directory</h2><p>Search and review registered suppliers.</p></div><button class="button button-primary" data-open-modal="supplier-modal">+ Add supplier</button></div>
+    <div class="toolbar"><input class="search-input" type="search" placeholder="Search supplier, ID or contact..." data-table-search="supplier-table"><select data-table-filter="supplier-table" data-filter-column="5"><option value="">All statuses</option><option>Active</option><option>Pending</option><option>Suspended</option></select></div>
+    <div class="table-wrap"><table id="supplier-table"><thead><tr><th>Supplier</th><th>Supplier ID</th><th>Category</th><th>Contact</th><th>Email</th><th>Status</th><th>Action</th></tr></thead><tbody>
+    <tr><td>McKesson Corporation</td><td>SUP-001</td><td>Wholesaler</td><td>Amtul Noor</td><td>contact@mckesson.example</td><td><span class="status status-active">Active</span></td><td><button class="text-button" data-tab-target="supplier-profile">View</button></td></tr>
+    <tr><td>Cardinal Health</td><td>SUP-002</td><td>Distributor</td><td>Sharmeen Asghar</td><td>info@cardinal.example</td><td><span class="status status-active">Active</span></td><td><button class="text-button" data-tab-target="supplier-profile">View</button></td></tr>
+    <tr><td>Pfizer Inc.</td><td>SUP-003</td><td>Manufacturer</td><td>Kainat Shabbir</td><td>support@pfizer.example</td><td><span class="status status-pending">Pending</span></td><td><button class="text-button" data-tab-target="supplier-profile">View</button></td></tr>
+    <tr><td>Cencora Distribution</td><td>SUP-004</td><td>Distributor</td><td>Areesha Awais</td><td>sales@cencora.example</td><td><span class="status status-suspended">Suspended</span></td><td><button class="text-button" data-tab-target="supplier-profile">View</button></td></tr>
+    </tbody></table></div>
+  </section>
+</section>
+<section class="tab-panel" id="supplier-profile">
+  <div class="panel-heading"><div><h2>Supplier profile</h2><p>Supplier overview, contact information and purchasing relationship.</p></div><span class="status status-active">Active</span></div>
+  <div class="detail-grid">
+    <article class="panel"><h3>Company information</h3><dl class="detail-list"><dt>Supplier name</dt><dd>McKesson Corporation</dd><dt>Supplier ID</dt><dd>SUP-001</dd><dt>Category</dt><dd>Wholesaler</dd><dt>Primary contact</dt><dd>Robert Wilson</dd><dt>Email</dt><dd>contact@mckesson.example</dd><dt>Phone</dt><dd>+1 (555) 010-2000</dd></dl></article>
+    <article class="panel"><h3>Procurement summary</h3><div class="summary-number">24 <small>Purchase orders this year</small></div><div class="summary-number">$184,500 <small>Illustrative order value</small></div><p class="muted">Supplier performance and compliance status should be verified against approved source records.</p></article>
+  </div>
+  <section class="panel"><h3>Supplier documents</h3><div class="table-wrap"><table><thead><tr><th>Document</th><th>Reference</th><th>Review status</th><th>Last reviewed</th></tr></thead><tbody><tr><td>Business registration</td><td>DOC-1001</td><td><span class="status status-active">Verified</span></td><td>Nov 12, 2026</td></tr><tr><td>Supplier agreement</td><td>DOC-1002</td><td><span class="status status-pending">Renewal due</span></td><td>Oct 01, 2026</td></tr></tbody></table></div></section>
+</section>
+<div class="modal-backdrop" id="supplier-modal"><form class="modal-card" data-demo-form><button type="button" class="modal-close" data-close-modal aria-label="Close">×</button><h2>Add supplier</h2><p>Enter the supplier's basic registration details.</p><label>Supplier name<input required name="supplierName"></label><label>Supplier category<select required><option value="">Choose category</option><option>Wholesaler</option><option>Manufacturer</option><option>Distributor</option></select></label><label>Contact person<input required></label><label>Email address<input required type="email"></label><div class="modal-actions"><button type="button" class="button button-secondary" data-close-modal>Cancel</button><button class="button button-primary">Save supplier</button></div></form></div>
+
+      <footer class="page-footer">© 2026 County Hub <span>Demonstration data · Not connected to a live system</span></footer>
+    </section>
+  </main>
+</div>
+</body>
+</html>

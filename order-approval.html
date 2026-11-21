@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="County Hub procurement and 340B compliance">
+  <title>Purchase Order Approval | County Hub</title>
+  <link rel="stylesheet" href="county-hub.css">
+  <script src="county-hub.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="340b-dashboard.html"><span class="brand-mark">CH</span><span><strong>County Hub</strong><small>Healthcare Management</small></span></a>
+    <p class="nav-heading">PROCUREMENT</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="suppliers.html">Supplier Management</a><a class="nav-link " href="purchase-orders.html">Purchase Order Creation</a><a class="nav-link active" href="order-approval.html">Purchase Order Approval</a><a class="nav-link " href="receiving-invoices.html">Goods Receiving & Invoices</a>
+    </nav>
+    <p class="nav-heading">340B COMPLIANCE</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="340b-dashboard.html">340B Program Dashboard</a><a class="nav-link " href="covered-entities.html">Covered Entities</a><a class="nav-link " href="340b-transactions.html">Transactions & Eligibility</a><a class="nav-link " href="compliance.html">Compliance & Audit</a>
+    </nav>
+    <div class="sidebar-bottom"><strong>County Hub</strong><small>Procurement &amp; 340B workspace</small></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div class="breadcrumbs">County Hub <span>/</span> Purchase Order Approval</div>
+      <div class="topbar-user"><span class="notification-indicator">●</span><span class="user-avatar">JD</span><span><strong>Sharmeen Asghar</strong><small>Procurement Admin</small></span></div>
+    </header>
+    <section class="page-content">
+      <div class="page-heading">
+        <div><p class="eyebrow">PROCUREMENT WORKFLOW</p><h1>Purchase Order Approval</h1><p class="page-description">Review submitted purchase orders, inspect supporting details and record an approval decision.</p></div>
+        <div class="page-actions"><button class="button button-secondary" type="button" data-action="export">Export CSV</button></div>
+      </div>
+      
+<div class="metric-grid"><article class="metric-card"><span>Awaiting approval</span><strong>12</strong><small>Orders in review queue</small></article><article class="metric-card"><span>Approved this month</span><strong>46</strong><small class="positive">Completed decisions</small></article><article class="metric-card"><span>Returned for changes</span><strong>03</strong><small class="warning-text">Action required</small></article><article class="metric-card"><span>Pending value</span><strong>$82,400</strong><small>Illustrative amount</small></article></div>
+<section class="panel"><div class="panel-heading"><div><h2>Approval queue</h2><p>Orders requiring an authorized review.</p></div><select><option>All statuses</option><option>Pending</option><option>Approved</option><option>Returned</option></select></div>
+<div class="table-wrap"><table><thead><tr><th>PO number</th><th>Supplier</th><th>Requested by</th><th>Submitted</th><th>Amount</th><th>Status</th><th>Review</th></tr></thead><tbody><tr><td>PO-2026-1042</td><td>McKesson Corporation</td><td>Alex Morgan</td><td>Nov 20, 2026</td><td>$12,450</td><td><span class="status status-pending">Pending</span></td><td><button class="text-button" data-show-review>Review order</button></td></tr><tr><td>PO-2026-1038</td><td>Cardinal Health</td><td>Jamie Lee</td><td>Nov 19, 2026</td><td>$8,200</td><td><span class="status status-pending">Pending</span></td><td><button class="text-button" data-show-review>Review order</button></td></tr><tr><td>PO-2026-1031</td><td>Pfizer Inc.</td><td>Alex Morgan</td><td>Nov 17, 2026</td><td>$4,800</td><td><span class="status status-active">Approved</span></td><td><button class="text-button" data-show-review>View</button></td></tr></tbody></table></div></section>
+<section class="panel" id="approval-review"><h2>Order review – PO-2026-1042</h2><div class="detail-grid"><div><p class="muted">Supplier</p><strong>McKesson Corporation</strong><p class="muted">Requested by Alex Morgan</p></div><div><p class="muted">Order total</p><strong>$12,450.00</strong><p class="muted">2 illustrative line items</p></div></div><h3>Reviewer checklist</h3><label class="check-row"><input type="checkbox"> Supplier is approved and documentation is current</label><label class="check-row"><input type="checkbox"> Quantities and pricing have been reviewed</label><label class="check-row"><input type="checkbox"> Inventory / purchasing classification has been checked</label><label>Decision notes<textarea rows="3" placeholder="Record review rationale..."></textarea></label><div class="action-row"><button class="button button-secondary" data-demo-action="Order returned for changes">Return for changes</button><button class="button button-primary" data-demo-action="Order approved in demonstration">Approve order</button></div><p class="callout">Demonstration only: real approval requires authenticated role permissions and a server-side audit record.</p></section>
+
+      <footer class="page-footer">© 2026 County Hub <span>Demonstration data · Not connected to a live system</span></footer>
+    </section>
+  </main>
+</div>
+</body>
+</html>

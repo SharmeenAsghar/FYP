@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="County Hub procurement and 340B compliance">
+  <title>Covered Entity Management | County Hub</title>
+  <link rel="stylesheet" href="county-hub.css">
+  <script src="county-hub.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="340b-dashboard.html"><span class="brand-mark">CH</span><span><strong>County Hub</strong><small>Healthcare Management</small></span></a>
+    <p class="nav-heading">PROCUREMENT</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="suppliers.html">Supplier Management</a><a class="nav-link " href="purchase-orders.html">Purchase Order Creation</a><a class="nav-link " href="order-approval.html">Purchase Order Approval</a><a class="nav-link " href="receiving-invoices.html">Goods Receiving & Invoices</a>
+    </nav>
+    <p class="nav-heading">340B COMPLIANCE</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="340b-dashboard.html">340B Program Dashboard</a><a class="nav-link active" href="covered-entities.html">Covered Entities</a><a class="nav-link " href="340b-transactions.html">Transactions & Eligibility</a><a class="nav-link " href="compliance.html">Compliance & Audit</a>
+    </nav>
+    <div class="sidebar-bottom"><strong>County Hub</strong><small>Procurement &amp; 340B workspace</small></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div class="breadcrumbs">County Hub <span>/</span> Covered Entity Management</div>
+      <div class="topbar-user"><span class="notification-indicator">●</span><span class="user-avatar">JD</span><span><strong>Sharmeen Asghar</strong><small>Procurement Admin</small></span></div>
+    </header>
+    <section class="page-content">
+      <div class="page-heading">
+        <div><p class="eyebrow">340B PROGRAM SETUP</p><h1>Covered Entity Management</h1><p class="page-description">Maintain covered entity profiles, participating sites, identifiers and registration information.</p></div>
+        <div class="page-actions"><button class="button button-secondary" type="button" data-action="export">Export CSV</button></div>
+      </div>
+      
+<div class="metric-grid"><article class="metric-card"><span>Registered entities</span><strong>08</strong><small>Program locations</small></article><article class="metric-card"><span>Active sites</span><strong>07</strong><small class="positive">Currently active</small></article><article class="metric-card"><span>Pending verification</span><strong>01</strong><small class="warning-text">Review documentation</small></article></div>
+<section class="panel"><div class="panel-heading"><div><h2>Covered entity directory</h2><p>Review entity records and registration details.</p></div><button class="button button-primary" data-open-modal="entity-modal">+ Add covered entity</button></div><div class="toolbar"><input class="search-input" type="search" placeholder="Search entity name or identifier..." data-table-search="entity-table"></div><div class="table-wrap"><table id="entity-table"><thead><tr><th>Entity name</th><th>Entity ID</th><th>Entity type</th><th>Site</th><th>Registration status</th><th>Action</th></tr></thead><tbody><tr><td>County General Hospital</td><td>CE-1001</td><td>Hospital</td><td>Main campus</td><td><span class="status status-active">Active</span></td><td><button class="text-button" data-demo-action="Entity profile opened">View details</button></td></tr><tr><td>Community Health Center</td><td>CE-1002</td><td>Health Center</td><td>North clinic</td><td><span class="status status-active">Active</span></td><td><button class="text-button" data-demo-action="Entity profile opened">View details</button></td></tr><tr><td>Riverside Clinic</td><td>CE-1003</td><td>Clinic</td><td>Riverside</td><td><span class="status status-pending">Pending review</span></td><td><button class="text-button" data-demo-action="Entity profile opened">View details</button></td></tr></tbody></table></div></section>
+<div class="panel"><h2>Entity profile snapshot</h2><div class="detail-grid"><div><p class="muted">Selected entity</p><h3>County General Hospital</h3><dl class="detail-list"><dt>Entity identifier</dt><dd>CE-1001</dd><dt>Entity type</dt><dd>Hospital</dd><dt>Primary site</dt><dd>Main campus</dd></dl></div><div><p class="muted">Program documentation</p><p><span class="status status-active">Registration recorded</span></p><p><span class="status status-pending">Annual review due</span></p><p class="muted">Confirm current registration and site eligibility with authoritative program records.</p></div></div></div>
+<div class="modal-backdrop" id="entity-modal"><form class="modal-card" data-demo-form><button type="button" class="modal-close" data-close-modal>×</button><h2>Add covered entity</h2><label>Entity name<input required></label><label>Entity identifier<input required></label><label>Entity type<select><option>Hospital</option><option>Health Center</option><option>Clinic</option></select></label><label>Site name<input required></label><div class="modal-actions"><button type="button" class="button button-secondary" data-close-modal>Cancel</button><button class="button button-primary">Save entity</button></div></form></div>
+
+      <footer class="page-footer">© 2026 County Hub <span>Demonstration data · Not connected to a live system</span></footer>
+    </section>
+  </main>
+</div>
+</body>
+</html>

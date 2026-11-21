@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="County Hub procurement and 340B compliance">
+  <title>Purchase Order Creation | County Hub</title>
+  <link rel="stylesheet" href="county-hub.css">
+  <script src="county-hub.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="340b-dashboard.html"><span class="brand-mark">CH</span><span><strong>County Hub</strong><small>Healthcare Management</small></span></a>
+    <p class="nav-heading">PROCUREMENT</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="suppliers.html">Supplier Management</a><a class="nav-link active" href="purchase-orders.html">Purchase Order Creation</a><a class="nav-link " href="order-approval.html">Purchase Order Approval</a><a class="nav-link " href="receiving-invoices.html">Goods Receiving & Invoices</a>
+    </nav>
+    <p class="nav-heading">340B COMPLIANCE</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="340b-dashboard.html">340B Program Dashboard</a><a class="nav-link " href="covered-entities.html">Covered Entities</a><a class="nav-link " href="340b-transactions.html">Transactions & Eligibility</a><a class="nav-link " href="compliance.html">Compliance & Audit</a>
+    </nav>
+    <div class="sidebar-bottom"><strong>County Hub</strong><small>Procurement &amp; 340B workspace</small></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div class="breadcrumbs">County Hub <span>/</span> Purchase Order Creation</div>
+      <div class="topbar-user"><span class="notification-indicator">●</span><span class="user-avatar">JD</span><span><strong>Sharmeen Asghar</strong><small>Procurement Admin</small></span></div>
+    </header>
+    <section class="page-content">
+      <div class="page-heading">
+        <div><p class="eyebrow">PROCUREMENT WORKFLOW</p><h1>Purchase Order Creation</h1><p class="page-description">Create a medicine purchase order, select a supplier and prepare the order for approval.</p></div>
+        <div class="page-actions"><button class="button button-secondary" type="button" data-action="export">Export CSV</button></div>
+      </div>
+      
+<div class="stepper"><span class="step active">1. Order details</span><span class="step">2. Items</span><span class="step">3. Review &amp; submit</span></div>
+<div class="two-column">
+<section class="panel"><h2>Purchase order information</h2><p class="panel-subtitle">Complete the order header before adding line items.</p>
+<form class="stack-form" data-demo-form>
+<label>Supplier<select required><option value="">Select supplier</option><option>McKesson Corporation</option><option>Cardinal Health</option><option>AmerisourceBergen</option></select></label>
+<div class="form-row"><label>Order date<input type="date" required></label><label>Expected delivery<input type="date" required></label></div>
+<label>Deliver to covered entity<select required><option value="">Select location</option><option>County General Hospital</option><option>Community Health Center</option></select></label>
+<label>Purchase purpose<select><option>340B eligible inventory</option><option>Non-340B / GPO inventory</option><option>WAC inventory</option></select></label>
+<label>Internal notes<textarea rows="3" placeholder="Add instructions or notes..."></textarea></label>
+</form></section>
+<section class="panel"><div class="panel-heading"><h2>Order summary</h2><span class="status status-pending">Draft</span></div><div class="summary-line"><span>PO number</span><strong>Draft / assigned on save</strong></div><div class="summary-line"><span>Line items</span><strong>0</strong></div><div class="summary-line"><span>Subtotal</span><strong>$0.00</strong></div><div class="summary-line"><span>Estimated total</span><strong>$0.00</strong></div><p class="callout">Inventory classification and 340B purchasing rules must be validated before submission.</p><button class="button button-primary button-full" data-demo-action="Purchase order saved as draft">Save draft</button></section>
+</div>
+<section class="panel"><div class="panel-heading"><div><h2>Order line items</h2><p>Add medicines and quantities requested.</p></div><button class="button button-secondary" data-add-row="po-items">+ Add item</button></div>
+<div class="table-wrap"><table id="po-items"><thead><tr><th>Medicine / product</th><th>NDC</th><th>Quantity</th><th>Unit cost</th><th>Est. total</th></tr></thead><tbody><tr><td><input placeholder="Product name"></td><td><input placeholder="NDC"></td><td><input type="number" min="1" placeholder="0"></td><td><input type="number" min="0" step=".01" placeholder="0.00"></td><td>—</td></tr></tbody></table></div></section>
+
+      <footer class="page-footer">© 2026 County Hub <span>Demonstration data · Not connected to a live system</span></footer>
+    </section>
+  </main>
+</div>
+</body>
+</html>

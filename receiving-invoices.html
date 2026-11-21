@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="County Hub procurement and 340B compliance">
+  <title>Goods Receiving & Invoices | County Hub</title>
+  <link rel="stylesheet" href="county-hub.css">
+  <script src="county-hub.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="340b-dashboard.html"><span class="brand-mark">CH</span><span><strong>County Hub</strong><small>Healthcare Management</small></span></a>
+    <p class="nav-heading">PROCUREMENT</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="suppliers.html">Supplier Management</a><a class="nav-link " href="purchase-orders.html">Purchase Order Creation</a><a class="nav-link " href="order-approval.html">Purchase Order Approval</a><a class="nav-link active" href="receiving-invoices.html">Goods Receiving & Invoices</a>
+    </nav>
+    <p class="nav-heading">340B COMPLIANCE</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="340b-dashboard.html">340B Program Dashboard</a><a class="nav-link " href="covered-entities.html">Covered Entities</a><a class="nav-link " href="340b-transactions.html">Transactions & Eligibility</a><a class="nav-link " href="compliance.html">Compliance & Audit</a>
+    </nav>
+    <div class="sidebar-bottom"><strong>County Hub</strong><small>Procurement &amp; 340B workspace</small></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div class="breadcrumbs">County Hub <span>/</span> Goods Receiving & Invoices</div>
+      <div class="topbar-user"><span class="notification-indicator">●</span><span class="user-avatar">JD</span><span><strong>Sharmeen Asghar</strong><small>Procurement Admin</small></span></div>
+    </header>
+    <section class="page-content">
+      <div class="page-heading">
+        <div><p class="eyebrow">PROCUREMENT OPERATIONS</p><h1>Goods Receiving & Invoices</h1><p class="page-description">Record deliveries, reconcile received quantities and track supplier invoices.</p></div>
+        <div class="page-actions"><button class="button button-secondary" type="button" data-action="export">Export CSV</button></div>
+      </div>
+      
+<div class="tabs"><button class="tab-button active" data-tab="receiving">Goods receiving</button><button class="tab-button" data-tab="invoices">Invoice management</button></div>
+<section class="tab-panel active" id="receiving"><div class="panel"><div class="panel-heading"><div><h2>Expected deliveries</h2><p>Match deliveries to approved purchase orders.</p></div><button class="button button-primary" data-demo-action="Receiving record started">+ Record receipt</button></div><div class="table-wrap"><table><thead><tr><th>PO number</th><th>Supplier</th><th>Expected</th><th>Items</th><th>Receiving status</th><th>Action</th></tr></thead><tbody><tr><td>PO-2026-1040</td><td>McKesson Corporation</td><td>Nov 21, 2026</td><td>4</td><td><span class="status status-pending">Partially received</span></td><td><button class="text-button" data-demo-action="Receipt detail opened">Receive items</button></td></tr><tr><td>PO-2026-1037</td><td>Cardinal Health</td><td>Nov 20, 2026</td><td>7</td><td><span class="status status-active">Received</span></td><td><button class="text-button" data-demo-action="Receipt detail opened">View receipt</button></td></tr></tbody></table></div></div>
+<div class="panel"><h2>Record goods received</h2><div class="form-grid"><label>Purchase order<select><option>PO-2026-1040 – McKesson</option></select></label><label>Delivery reference<input placeholder="Packing slip / delivery ID"></label><label>Received date<input type="date"></label><label>Received by<input placeholder="Staff member"></label></div><div class="table-wrap"><table><thead><tr><th>Product</th><th>Ordered</th><th>Previously received</th><th>Received now</th><th>Condition</th></tr></thead><tbody><tr><td>Example medicine A</td><td>100</td><td>60</td><td><input type="number" min="0" placeholder="40"></td><td><select><option>Good</option><option>Damaged</option><option>Quarantined</option></select></td></tr></tbody></table></div><button class="button button-primary" data-demo-action="Goods receipt saved in demonstration">Save receiving record</button></div></section>
+<section class="tab-panel" id="invoices"><div class="metric-grid"><article class="metric-card"><span>Invoices received</span><strong>86</strong><small>This month</small></article><article class="metric-card"><span>Awaiting match</span><strong>08</strong><small class="warning-text">Needs reconciliation</small></article><article class="metric-card"><span>Discrepancies</span><strong>03</strong><small class="danger-text">Review required</small></article></div><div class="panel"><div class="panel-heading"><div><h2>Invoice register</h2><p>Compare supplier invoices with purchase orders and receipts.</p></div><button class="button button-primary" data-demo-action="Invoice entry opened">+ Add invoice</button></div><div class="table-wrap"><table><thead><tr><th>Invoice</th><th>Supplier</th><th>PO reference</th><th>Invoice date</th><th>Amount</th><th>Match status</th><th>Action</th></tr></thead><tbody><tr><td>INV-77821</td><td>McKesson</td><td>PO-2026-1040</td><td>Nov 20, 2026</td><td>$6,420</td><td><span class="status status-pending">Pending match</span></td><td><button class="text-button" data-demo-action="Invoice reconciliation opened">Reconcile</button></td></tr><tr><td>INV-77802</td><td>Cardinal Health</td><td>PO-2026-1037</td><td>Nov 18, 2026</td><td>$3,200</td><td><span class="status status-active">Matched</span></td><td><button class="text-button" data-demo-action="Invoice details opened">View</button></td></tr></tbody></table></div></div></section>
+
+      <footer class="page-footer">© 2026 County Hub <span>Demonstration data · Not connected to a live system</span></footer>
+    </section>
+  </main>
+</div>
+</body>
+</html>

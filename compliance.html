@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="County Hub procurement and 340B compliance">
+  <title>Compliance & Audit | County Hub</title>
+  <link rel="stylesheet" href="county-hub.css">
+  <script src="county-hub.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="340b-dashboard.html"><span class="brand-mark">CH</span><span><strong>County Hub</strong><small>Healthcare Management</small></span></a>
+    <p class="nav-heading">PROCUREMENT</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="suppliers.html">Supplier Management</a><a class="nav-link " href="purchase-orders.html">Purchase Order Creation</a><a class="nav-link " href="order-approval.html">Purchase Order Approval</a><a class="nav-link " href="receiving-invoices.html">Goods Receiving & Invoices</a>
+    </nav>
+    <p class="nav-heading">340B COMPLIANCE</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="340b-dashboard.html">340B Program Dashboard</a><a class="nav-link " href="covered-entities.html">Covered Entities</a><a class="nav-link " href="340b-transactions.html">Transactions & Eligibility</a><a class="nav-link active" href="compliance.html">Compliance & Audit</a>
+    </nav>
+    <div class="sidebar-bottom"><strong>County Hub</strong><small>Procurement &amp; 340B workspace</small></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div class="breadcrumbs">County Hub <span>/</span> Compliance & Audit</div>
+      <div class="topbar-user"><span class="notification-indicator">●</span><span class="user-avatar">JD</span><span><strong>Sharmeen Asghar</strong><small>Procurement Admin</small></span></div>
+    </header>
+    <section class="page-content">
+      <div class="page-heading">
+        <div><p class="eyebrow">340B COMPLIANCE CONTROL CENTER</p><h1>Compliance & Audit</h1><p class="page-description">Monitor potential compliance issues, assign corrective actions and review the audit history.</p></div>
+        <div class="page-actions"><button class="button button-secondary" type="button" data-action="export">Export CSV</button></div>
+      </div>
+      
+<div class="tabs"><button class="tab-button active" data-tab="alerts">Compliance alerts</button><button class="tab-button" data-tab="actions">Corrective actions</button><button class="tab-button" data-tab="audit">Audit trail</button></div>
+<section class="tab-panel active" id="alerts"><div class="metric-grid"><article class="metric-card"><span>Open alerts</span><strong>06</strong><small>All severities</small></article><article class="metric-card"><span>High severity</span><strong class="danger-text">02</strong><small>Prioritize investigation</small></article><article class="metric-card"><span>Medium severity</span><strong class="warning-text">04</strong><small>Review required</small></article></div><div class="panel"><div class="panel-heading"><div><h2>Compliance alerts</h2><p>Potential duplicate discount, diversion and other exceptions.</p></div><select><option>All severities</option><option>High</option><option>Medium</option><option>Low</option></select></div><div class="table-wrap"><table><thead><tr><th>Alert ID</th><th>Alert type</th><th>Related reference</th><th>Detected</th><th>Severity</th><th>Status</th><th>Details</th></tr></thead><tbody><tr><td>ALT-0021</td><td>Potential duplicate discount</td><td>TX-340B-9023</td><td>Nov 20, 2026</td><td><span class="status status-danger">High</span></td><td><span class="status status-pending">Open</span></td><td><button class="text-button" data-show-alert>Investigate</button></td></tr><tr><td>ALT-0020</td><td>Potential diversion indicator</td><td>TX-340B-9018</td><td>Nov 19, 2026</td><td><span class="status status-danger">High</span></td><td><span class="status status-pending">Open</span></td><td><button class="text-button" data-show-alert>Investigate</button></td></tr><tr><td>ALT-0019</td><td>Unmatched inventory movement</td><td>INV-77821</td><td>Nov 18, 2026</td><td><span class="status status-pending">Medium</span></td><td><span class="status status-active">Assigned</span></td><td><button class="text-button" data-show-alert>View</button></td></tr></tbody></table></div></div><div class="panel" id="alert-detail"><h2>Alert investigation</h2><div class="callout callout-danger"><strong>ALT-0021 · Potential duplicate discount</strong><p>A transaction pattern requires review against relevant payer, claims and purchasing records. This is an indicator, not a confirmed violation.</p></div><div class="detail-grid"><div><p class="muted">Related transaction</p><strong>TX-340B-9023</strong><p class="muted">Covered entity: County General Hospital</p></div><div><p class="muted">Severity / status</p><strong>High · Open</strong><p class="muted">Detected Nov 20, 2026</p></div></div><label>Investigation notes<textarea rows="3" placeholder="Record evidence, checks and findings..."></textarea></label><button class="button button-primary" data-demo-action="Investigation notes saved in demonstration">Save investigation notes</button></div></section>
+<section class="tab-panel" id="actions"><div class="panel"><div class="panel-heading"><div><h2>Corrective action register</h2><p>Assign owners, due dates and resolution evidence.</p></div><button class="button button-primary" data-open-modal="action-modal">+ Assign action</button></div><div class="table-wrap"><table><thead><tr><th>Action ID</th><th>Related alert</th><th>Action</th><th>Owner</th><th>Due date</th><th>Status</th></tr></thead><tbody><tr><td>CA-0018</td><td>ALT-0021</td><td>Reconcile payer and claim records</td><td>Compliance Officer</td><td>Nov 28, 2026</td><td><span class="status status-pending">In progress</span></td></tr><tr><td>CA-0017</td><td>ALT-0020</td><td>Review inventory movement</td><td>Pharmacy Manager</td><td>Nov 25, 2026</td><td><span class="status status-active">Completed</span></td></tr></tbody></table></div></div><div class="panel"><h2>Corrective action details</h2><div class="form-grid"><label>Related alert<select><option>ALT-0021 – Potential duplicate discount</option><option>ALT-0020 – Potential diversion indicator</option></select></label><label>Assigned owner<input placeholder="Name or role"></label><label>Due date<input type="date"></label><label>Priority<select><option>High</option><option>Medium</option><option>Low</option></select></label></div><label>Required action<textarea rows="3" placeholder="Describe corrective action and expected evidence..."></textarea></label><button class="button button-primary" data-demo-action="Corrective action assigned in demonstration">Assign corrective action</button></div></section>
+<section class="tab-panel" id="audit"><div class="panel"><div class="panel-heading"><div><h2>Audit trail</h2><p>Chronological record of user and system activity.</p></div><button class="button button-secondary" data-action="export">Export audit log</button></div><div class="toolbar"><input class="search-input" type="search" placeholder="Search user, record or activity..." data-table-search="audit-table"></div><div class="table-wrap"><table id="audit-table"><thead><tr><th>Timestamp</th><th>User / role</th><th>Activity</th><th>Record reference</th><th>Result</th></tr></thead><tbody><tr><td>Nov 21, 2026 09:42</td><td>J. Davis · Admin</td><td>Eligibility review updated</td><td>TX-340B-9021</td><td><span class="status status-active">Recorded</span></td></tr><tr><td>Nov 20, 2026 15:18</td><td>A. Morgan · Buyer</td><td>Purchase order submitted</td><td>PO-2026-1042</td><td><span class="status status-active">Recorded</span></td></tr><tr><td>Nov 20, 2026 11:06</td><td>System</td><td>Compliance alert generated</td><td>ALT-0021</td><td><span class="status status-active">Recorded</span></td></tr></tbody></table></div><p class="callout">Production audit logs should be append-only, access-controlled, timestamped and retained according to applicable policy.</p></div></section>
+<div class="modal-backdrop" id="action-modal"><form class="modal-card" data-demo-form><button type="button" class="modal-close" data-close-modal>×</button><h2>Assign corrective action</h2><label>Action title<input required></label><label>Assigned owner<input required></label><label>Due date<input type="date" required></label><label>Related alert<input placeholder="ALT-0021"></label><div class="modal-actions"><button type="button" class="button button-secondary" data-close-modal>Cancel</button><button class="button button-primary">Assign action</button></div></form></div>
+
+      <footer class="page-footer">© 2026 County Hub <span>Demonstration data · Not connected to a live system</span></footer>
+    </section>
+  </main>
+</div>
+</body>
+</html>

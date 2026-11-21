@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="County Hub procurement and 340B compliance">
+  <title>340B Transactions & Eligibility | County Hub</title>
+  <link rel="stylesheet" href="county-hub.css">
+  <script src="county-hub.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="340b-dashboard.html"><span class="brand-mark">CH</span><span><strong>County Hub</strong><small>Healthcare Management</small></span></a>
+    <p class="nav-heading">PROCUREMENT</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="suppliers.html">Supplier Management</a><a class="nav-link " href="purchase-orders.html">Purchase Order Creation</a><a class="nav-link " href="order-approval.html">Purchase Order Approval</a><a class="nav-link " href="receiving-invoices.html">Goods Receiving & Invoices</a>
+    </nav>
+    <p class="nav-heading">340B COMPLIANCE</p>
+    <nav class="side-nav">
+      <a class="nav-link " href="340b-dashboard.html">340B Program Dashboard</a><a class="nav-link " href="covered-entities.html">Covered Entities</a><a class="nav-link active" href="340b-transactions.html">Transactions & Eligibility</a><a class="nav-link " href="compliance.html">Compliance & Audit</a>
+    </nav>
+    <div class="sidebar-bottom"><strong>County Hub</strong><small>Procurement &amp; 340B workspace</small></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div class="breadcrumbs">County Hub <span>/</span> 340B Transactions & Eligibility</div>
+      <div class="topbar-user"><span class="notification-indicator">●</span><span class="user-avatar">JD</span><span><strong>Sharmeen Asghar</strong><small>Procurement Admin</small></span></div>
+    </header>
+    <section class="page-content">
+      <div class="page-heading">
+        <div><p class="eyebrow">340B TRANSACTION OVERSIGHT</p><h1>340B Transactions & Eligibility</h1><p class="page-description">Review transaction records and their associated patient eligibility checks.</p></div>
+        <div class="page-actions"><button class="button button-secondary" type="button" data-action="export">Export CSV</button></div>
+      </div>
+      
+<div class="tabs"><button class="tab-button active" data-tab="transaction-list">Transaction register</button><button class="tab-button" data-tab="eligibility">Eligibility review</button></div>
+<section class="tab-panel active" id="transaction-list"><div class="metric-grid"><article class="metric-card"><span>Transactions</span><strong>2,486</strong><small>This month</small></article><article class="metric-card"><span>Eligible / verified</span><strong>2,301</strong><small class="positive">Review recorded</small></article><article class="metric-card"><span>Pending review</span><strong>124</strong><small class="warning-text">Requires review</small></article><article class="metric-card"><span>Flagged</span><strong>61</strong><small class="danger-text">Investigate exceptions</small></article></div><section class="panel"><div class="panel-heading"><div><h2>340B transaction register</h2><p>Transaction-to-patient eligibility association for authorized review.</p></div><button class="button button-secondary" data-action="export">Export CSV</button></div><div class="toolbar"><input class="search-input" type="search" placeholder="Search transaction, patient token or NDC..." data-table-search="transaction-table"><select data-table-filter="transaction-table" data-filter-column="6"><option value="">All review statuses</option><option>Verified</option><option>Pending</option><option>Flagged</option></select></div><div class="table-wrap"><table id="transaction-table"><thead><tr><th>Transaction ID</th><th>Patient token</th><th>Entity</th><th>Service date</th><th>Product / NDC</th><th>Quantity</th><th>Eligibility status</th><th>Review</th></tr></thead><tbody><tr><td>TX-340B-9021</td><td>PT-****1042</td><td>County General</td><td>Nov 21, 2026</td><td>Medicine A / 00000-111</td><td>30</td><td><span class="status status-active">Verified</span></td><td><button class="text-button" data-tab-target="eligibility">Review</button></td></tr><tr><td>TX-340B-9022</td><td>PT-****2088</td><td>Community Health</td><td>Nov 21, 2026</td><td>Medicine B / 00000-222</td><td>15</td><td><span class="status status-pending">Pending</span></td><td><button class="text-button" data-tab-target="eligibility">Review</button></td></tr><tr><td>TX-340B-9023</td><td>PT-****3091</td><td>County General</td><td>Nov 20, 2026</td><td>Medicine C / 00000-333</td><td>10</td><td><span class="status status-danger">Flagged</span></td><td><button class="text-button" data-tab-target="eligibility">Review</button></td></tr></tbody></table></div></section></section>
+<section class="tab-panel" id="eligibility"><div class="panel"><h2>Patient eligibility review</h2><p class="panel-subtitle">Use a minimum-necessary patient token; avoid displaying direct patient identifiers in general work queues.</p><div class="detail-grid"><div><dl class="detail-list"><dt>Transaction</dt><dd>TX-340B-9022</dd><dt>Patient reference</dt><dd>PT-****2088</dd><dt>Covered entity</dt><dd>Community Health Center</dd><dt>Service date</dt><dd>Nov 21, 2026</dd><dt>Prescription reference</dt><dd>RX-****771</dd></dl></div><div><dl class="detail-list"><dt>Product</dt><dd>Medicine B</dd><dt>NDC</dt><dd>00000-222</dd><dt>Quantity</dt><dd>15</dd><dt>Current review</dt><dd><span class="status status-pending">Pending</span></dd></dl></div></div><h3>Eligibility review checklist</h3><label class="check-row"><input type="checkbox"> Patient relationship and covered entity records reviewed</label><label class="check-row"><input type="checkbox"> Eligible service / encounter documentation reviewed</label><label class="check-row"><input type="checkbox"> Prescription and dispensing records reconciled</label><label class="check-row"><input type="checkbox"> Duplicate discount and diversion checks completed</label><label>Reviewer notes<textarea rows="3" placeholder="Document evidence and rationale..."></textarea></label><div class="action-row"><button class="button button-secondary" data-demo-action="Transaction marked for further investigation">Escalate for review</button><button class="button button-primary" data-demo-action="Eligibility review recorded in demonstration">Save review</button></div><p class="callout">Eligibility decisions require qualified review under applicable 340B policies. This sample screen does not determine legal eligibility.</p></div></section>
+
+      <footer class="page-footer">© 2026 County Hub <span>Demonstration data · Not connected to a live system</span></footer>
+    </section>
+  </main>
+</div>
+</body>
+</html>
